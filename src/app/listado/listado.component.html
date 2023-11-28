@@ -1,9 +1,13 @@
 <h1>Listado de Personas</h1>
 <hr>
 <form>
-    <input #nombre type="text"  />
-    <input #apellido type="text"  />
+    <input #nombre type="text" placeholder="Nombre"/>
+    &nbsp; 
+    <input #apellido type="text" placeholder="Apellido"/>
+    &nbsp; 
     <button (click)="agregarPersonas(nombre.value, apellido.value)" class="btn btn-primary" type="button">Agregar</button>
 </form>
 <hr>
-<p *ngFor="let persona of listaPersonas">{{persona.getNombre()}}</p>
+<ol>
+    <li *ngFor="let persona of listaPersonas">{{persona.getNombre()}}  {{persona.getApellido()}}</li>
+</ol>
