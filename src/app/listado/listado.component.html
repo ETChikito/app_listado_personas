@@ -3,5 +3,7 @@
 <form>
     <input #nombre type="text"  />
     <input #apellido type="text"  />
-    <button type="button">Agregar</button>
+    <button (click)="agregarPersonas(nombre.value, apellido.value)" class="btn btn-primary" type="button">Agregar</button>
 </form>
+<hr>
+<p *ngFor="let persona of listaPersonas">{{persona.getNombre()}}</p>
