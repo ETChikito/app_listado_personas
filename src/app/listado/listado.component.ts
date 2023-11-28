@@ -9,10 +9,11 @@ import { PersonasComponent } from '../personas/personas.component';
 export class ListadoComponent {
 
   listaPersonas:PersonasComponent[] = [];
+  nombreInput:string = "";
+  apellidoInput:string = "";
 
-  agregarPersonas(nombre:string, apellido:string){
-
-    let persona:PersonasComponent = new PersonasComponent(nombre, apellido);
+  agregarPersonas(){
+    let persona:PersonasComponent = new PersonasComponent(this.nombreInput, this.apellidoInput);
     this.listaPersonas.push(persona);
   }
 }
