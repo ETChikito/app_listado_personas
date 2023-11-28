@@ -10,13 +10,7 @@ import { Inject } from '@angular/core';
 
 export class PersonasComponent {
   
-  private nombre:string;
-  private apellido:string;
-
-  constructor(@Inject(String) nombre:string, @Inject(String) apellido:string){
-    this.nombre = nombre;
-    this.apellido = apellido;
-  }
+  constructor(@Inject(String) private nombre:string,@Inject(String) private apellido:string){}
 
   getNombre(){
     return this.nombre;
