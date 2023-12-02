@@ -4,13 +4,14 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ListadoComponent } from './listado/listado.component';
-import { PersonasComponent } from './personas/personas.component';
+import { FormularioComponent } from './formulario/formulario.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ListadoComponent,
-    PersonasComponent
+    FormularioComponent,
   ],
   imports: [
     BrowserModule,

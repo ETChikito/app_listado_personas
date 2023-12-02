@@ -1,1 +1,6 @@
-<app-listado></app-listado>
+<app-formulario
+(personaCreada)="personaAgregada($event)">
+</app-formulario>
+<app-listado
+[listaPersonas] = "listaPersonas">
+</app-listado>
