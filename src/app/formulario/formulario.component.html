@@ -5,13 +5,13 @@
     <hr>
     <form class="row">
         <div class="form-group col-md-2">
-            <input #nombre name="inputNombre" type="text" placeholder="Nombre" class="form-control" [(ngModel)] = "nombreInput"/>
+            <input #nombreInput name="inputNombre" type="text" placeholder="Nombre" class="form-control" />
         </div>
         <div class="form-group col-md-2">
-            <input #apellido type="text" name="inputApellido" placeholder="Apellido" class="form-control" [(ngModel)] = "apellidoInput"/>
+            <input #apellidoInput type="text" name="inputApellido" placeholder="Apellido" class="form-control" />
         </div>
         <div class="col">
-            <button (click)="agregarPersonas()" class="btn btn-primary"
+            <button (click)="agregarPersonas(nombreInput, apellidoInput)" class="btn btn-primary"
                 type="button">Agregar</button>
         </div>
     </form>
