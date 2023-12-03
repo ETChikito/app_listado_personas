@@ -1,5 +1,6 @@
 import { Component, Input  } from '@angular/core';
 import { Persona } from '../persona.model';
+import { PersonasService } from '../personas.service';
 
 @Component({
   selector: 'app-listado',
@@ -9,6 +10,8 @@ import { Persona } from '../persona.model';
 
 export class ListadoComponent {
 
-  @Input() listaPersonas:Persona[] = [];
+  listaPersonas:Persona[] = this.personasService.listaPersonas;
   
+  constructor(private personasService: PersonasService){}
+
 }
